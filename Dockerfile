@@ -20,7 +20,8 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 RUN python3 -m pip install --upgrade pip && \
-    python3 -m pip install cython pybind11
+    python3 -m pip install cython pybind11 && \
+    python3 -m pip install --upgrade setuptools
 
 RUN cd /tmp && \
     wget http://registrationcenter-download.intel.com/akdlm/irc_nas/tec/15816/l_mkl_2019.5.281.tgz && \
